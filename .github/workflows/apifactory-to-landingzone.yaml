@@ -1,0 +1,26 @@
+name: Propagate api factory to landingzone
+
+permissions:
+  contents: write
+  pull-requests: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_ref:
+        required: true
+        type: string
+      target_ref:
+        required: true
+        type: string
+
+jobs:
+  call_propagate:
+    uses: KL-Engineering/github-action-workflows/.github/workflows/propagate-release-candidate.yaml@v3.3.0
+    with:
+      base_ref: 
+      target_ref: 
+      base_env: apifactory/uk/manifests
+      target_env: landingzone/global/manifests
+    secrets:
+      github-token: 

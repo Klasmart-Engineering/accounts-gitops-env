@@ -1,0 +1,13 @@
+global:
+  image:
+    repository: ghcr.io/kl-engineering/accounts-microgateway
+    pullPolicy: Always
+    tag: 0.0.3
+
+  region: "uk"
+  environment: "apifactory"
+
+  imagePullSecrets:
+    - name: dockerconfigjson-ghcr
+  nameOverride: "accounts-microgateway"
+  fullnameOverride: "accounts-microgateway"

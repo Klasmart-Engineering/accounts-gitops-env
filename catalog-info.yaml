@@ -1,0 +1,15 @@
+
+
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "accounts"
+  description: "accounts"
+  annotations:
+    github.com/project-slug: undefined/undefined
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  lifecycle: experimental
+  owner: "api-management-team"

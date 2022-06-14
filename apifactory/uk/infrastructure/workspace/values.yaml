@@ -1,0 +1,14 @@
+# Default values for workspace.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+kl-base-terraform:
+  fullnameOverride: "workspace-apifactory-uk"
+  module:
+    source: git@github.com:KL-Engineering/accounts-terraform-module.git
+    version: v0.1.6
+  provider_config:
+    aws_region: eu-west-2
+  outputs:
+    - key: the_bucket_region
+      moduleOutputName: bucket_region
